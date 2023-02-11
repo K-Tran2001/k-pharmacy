@@ -21,7 +21,7 @@ const Register = () => {
         const { name, value } = e.target
         setUserData({ ...userData, [name]: value })
         //dispatch({ type: 'NOTIFY', payload: {} })
-        console.log(userData);
+        //console.log(userData);
     }
 
     const handleSubmit = async e => {

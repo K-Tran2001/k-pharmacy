@@ -8,7 +8,7 @@ import { useRouter } from 'next/router'
 const Modal = () => {
     const [state, dispatch] = useContext(DataContext)
     const { modal, auth } = state
-    console.log(state)
+
 
     const router = useRouter()
 

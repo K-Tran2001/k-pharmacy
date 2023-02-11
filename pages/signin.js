@@ -28,7 +28,7 @@ const Signin = () => {
     const handleSubmit = async e => {
         //console.log(state)
         e.preventDefault()
-        console.log({ user: userData });
+        //console.log({ user: userData });
         const errMsg = valid_acc(email, password)
         if (errMsg) return dispatch({ type: 'NOTIFY', payload: { error: errMsg } })
 

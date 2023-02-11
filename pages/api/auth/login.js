@@ -16,7 +16,7 @@ export default async (req, res) => {
 
 const login = async (req, res) => {
     try {
-        console.log(req.body)
+        //console.log(req.body)
         //
 
 
@@ -29,7 +29,7 @@ const login = async (req, res) => {
         if (errMsg) return res.status(400).json({ err: errMsg })
         const passwordHash = await bcrypt.hash(password, 12)
         const user = await Users.findOne({ email })
-        console.log({ find_user: user })
+        //console.log({ find_user: user })
 
         const isMatch = await bcrypt.compare(password, user.password)
 

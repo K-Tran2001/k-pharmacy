@@ -15,7 +15,7 @@ const DetailProduct = (props) => {
 
     //const img = product?.images[0]?.url
     const img = product?.images[0]
-    console.log(img)
+    //console.log(img)
 
     const [state, dispatch] = useContext(DataContext)
     const { cart } = state
@@ -102,7 +102,7 @@ const DetailProduct = (props) => {
 
 export async function getServerSideProps({ params: { id } }) {
     const res = await getData(`product/${id}`)
-    console.log(res)
+    //console.log(res)
 
     // server side rendering
     return {

@@ -5,7 +5,7 @@ import { updateItem } from '../store/Actions'
 
 const OrderDetail = ({ orderDetail, state, dispatch }) => {
     const { auth, orders } = state
-    console.log({ orderDetail: orderDetail })
+    //console.log({ orderDetail: orderDetail })
 
     const handleDelivered = (order) => {
         dispatch({ type: 'NOTIFY', payload: { loading: true } })

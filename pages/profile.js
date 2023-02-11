@@ -28,7 +28,7 @@ const Profile = () => {
     const handleChange = (e) => {
         const { name, value } = e.target
         setData({ ...data, [name]: value })
-        console.log(data)
+        //console.log(data)
         dispatch({ type: 'NOTIFY', payload: {} })
     }
 
@@ -73,7 +73,7 @@ const Profile = () => {
         dispatch({ type: 'NOTIFY', payload: { loading: true } })
 
         if (avatar) media = await imageUpload([avatar])
-        console.log(avatar)
+        //console.log(avatar)
 
         patchData('user', {
             name, avatar: avatar ? media[0].url : auth.user.avatar

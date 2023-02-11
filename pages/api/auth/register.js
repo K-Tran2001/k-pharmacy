@@ -15,7 +15,7 @@ export default async (req, res) => {
 
 const register = async (req, res) => {
     try {
-        console.log(req.body)
+        //console.log(req.body)
         //
         //const { name, email, password, cf_password } = req.boby
         const name = req.body.name
@@ -27,7 +27,7 @@ const register = async (req, res) => {
         const errMsg = valid(name, email, password, cf_password)
         if (errMsg) return res.status(400).json({ err: errMsg })
         const user = await Users.find({ email })
-        console.log({ userexists: user })
+        //console.log({ userexists: user })
         if (user.email) return res.status(400).json({ err: "email is already exists" })
 
         const passwordHash = await bcrypt.hash(password, 12)
@@ -35,9 +35,9 @@ const register = async (req, res) => {
             name, email, password: passwordHash, cf_password
         })
 
-        console.log(newUser)
+        //console.log(newUser)
         const result = await newUser.save()
-        console.log(result)
+        //console.log(result)
         res.json({ msg: "Register success!!" })
 
 

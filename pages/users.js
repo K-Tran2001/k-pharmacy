@@ -29,7 +29,7 @@ const Users = () => {
 
                 <tbody>
                     {
-                        users.map((user, index) => (
+                        users?.map((user, index) => (
                             <tr key={user._id} style={{ cursor: 'pointer' }}>
                                 <th>{index + 1}</th>
                                 <th>{user._id}</th>
